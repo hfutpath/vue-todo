@@ -11,7 +11,12 @@
       <span>特别关注</span>
       <span>删除</span>
     </p>
-    <FundItem v-for="li in lists" v-bind="li" v-bind:key="li.fundcode" />
+    <FundItem
+      v-for="li in lists"
+      v-bind="li"
+      v-bind:key="li.fundcode"
+      v-on:remove="lists.splice(index, 1)"
+    />
     <p>
       添加新基金：
       <input v-model="newFundCode" />
