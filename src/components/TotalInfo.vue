@@ -15,6 +15,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "TotalInfo",
   data() {
@@ -29,10 +30,8 @@ export default {
         "https://push2.eastmoney.com/api/qt/ulist.np/get?fltt=2&fields=f2,f3,f4,f12,f14&secids=1.000001,1.000300,0.399001,0.399006"
       )
       .then((response) => {
-        console.log("response: ", response);
         this.lists = response.data.data.diff;
       });
-    console.log("加载完成》》》》");
   },
 };
 </script>
