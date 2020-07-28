@@ -79,14 +79,11 @@ export default {
         `http://fundgz.1234567.com.cn/js/${this.newFundCode}.js`,
         { name: "jsonpgz" },
         (err, response) => {
+          console.log('err: ', err);
           this.lists.push(response);
           this.newFundCode = "";
         }
-      ).catch((err) => {
-        if (err) {
-          return alert("该基金不存在，请重新输入基金代码");
-        }
-      });
+      );
     },
   },
 };
